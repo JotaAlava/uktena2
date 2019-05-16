@@ -32,11 +32,12 @@
     <ion-img src="/assets/shapes.svg"></ion-img>
     <ion-card-header>
       <ion-card-subtitle>Get Started</ion-card-subtitle>
-      <ion-card-title>Welcome to Jota</ion-card-title>
+      <ion-card-title>Welcome to Uktena</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the
-        resources below for next steps.</p>
+      <p>Time Remaining: {{getPrettyTimeLeft(state.timeRemaining)}}</p>
+      <button ion-button full (click)="startTimer()">Start Work</button>
+      <button ion-button full (click)="stopTimer()">Stop Work</button>
     </ion-card-content>
   </ion-card>
   <ion-list lines="none">

@@ -65,6 +65,9 @@ export class AuthService {
             this.setIdToken(authResult.idToken);
             this.setAccessToken(authResult.accessToken);
 
+            console.log('*** Auth Result ***');
+            console.log(authResult);
+
             const expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
             this.setStorageVariable('expires_at', expiresAt);
 
@@ -77,6 +80,8 @@ export class AuthService {
                 this.setStorageVariable('profile', profile);
                 this.zone.run(() => {
                     this.user = profile;
+                    console.log('*** Profile Fetched ***');
+                    console.log(profile);
                 });
             });
         });
