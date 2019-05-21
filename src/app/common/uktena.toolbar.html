@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="uktena-center">
+      Welcome
+      <span *ngIf="auth.isAuthenticated()">{{ auth.user.nickname }}</span>
+      <ion-badge class="uktena-pointer" *ngIf="!auth.isAuthenticated()" color="danger" (click)="auth.login()">Log-in</ion-badge>
+      <div *ngIf="auth.isAuthenticated()">
+        <button ion-button block color="primary" (click)="auth.logout()">Logout, {{ auth.user.nickname }}</button>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>

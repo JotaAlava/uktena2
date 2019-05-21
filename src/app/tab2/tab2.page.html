@@ -1,9 +1,6 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<uktena-toolbar></uktena-toolbar>
 
-<ion-content></ion-content>
+<ion-content>
+    <ion-input placeholder="Work Accomplished..." [(ngModel)]="description" (keyup.enter)="create(description)"></ion-input>
+    <ion-button expand="block" (click)="create(description)">Submit</ion-button>    
+</ion-content>

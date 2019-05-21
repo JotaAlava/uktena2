@@ -1,9 +1,5 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Three
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<uktena-toolbar></uktena-toolbar>
 
-<ion-content></ion-content>
+<ion-content>
+  <h3 *ngIf="auth.isAuthenticated()">There is nothing to see here until you log-in or register.</h3>
+</ion-content>

@@ -8,6 +8,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthService } from 'src/app/auth.service';
+import { TimerService } from 'src/app/services/timer.service';
+import { LocalTomatoService } from './services/local.tomato.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +19,9 @@ import { AppComponent } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    AuthService,
+    TimerService,
+    LocalTomatoService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

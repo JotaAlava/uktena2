@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { AuthService } from 'src/app/auth.service';
 
 @Component({
-  selector: 'app-tab3',
-  templateUrl: 'tab3.page.html',
-  styleUrls: ['tab3.page.scss']
+  selector: 'uktena-toolbar',
+  templateUrl: 'uktena.toolbar.html'
 })
-export class Tab3Page {
+export class UktenaToolbar {
   constructor(public auth: AuthService) {
+    
   }
 }

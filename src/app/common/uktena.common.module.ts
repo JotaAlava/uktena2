@@ -3,17 +3,15 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab2Page } from './tab2.page';
-import { UktenaCommonModule } from '../common/uktena.common.module';
+import { UktenaToolbar } from './uktena.toolbar'
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
-    FormsModule,
-    UktenaCommonModule,
-    RouterModule.forChild([{ path: '', component: Tab2Page }])
+    FormsModule
   ],
-  declarations: [Tab2Page]
+  declarations: [UktenaToolbar],
+  exports: [UktenaToolbar]
 })
-export class Tab2PageModule {}
+export class UktenaCommonModule {}
